@@ -1,13 +1,24 @@
 <template lang="pug">
-  <textCount />
+  div
+    textCountCompornent
+    footerCompornent
 </template>
 
 <script>
-import TextCount from '~/components/TextCount.vue'
+import TextCountCompornent from '~/components/TextCount.vue'
+import FooterCompornent from '~/components/Footer.vue'
 
 export default {
   components: {
-    TextCount
+    TextCountCompornent,
+    FooterCompornent
   }
 }
 </script>
+
+<style lang="stylus">
+  .inner
+    margin 0 auto
+    transition .2s
+    width 90vw
+</style>

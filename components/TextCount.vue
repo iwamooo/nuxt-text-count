@@ -10,7 +10,10 @@
 
         dl.usage
           dt.usageTitle 使い方
-          dd.usageDescription テキストボックスに入力するとすぐに文字数・バイト数がカウントされます。
+          dd.usageDescription
+            | テキストボックスに入力するとすぐに文字数・バイト数がカウントされます。
+            br
+            | ※ 一部のブラウザを除き、オフラインの状態であってもネイティブアプリのように高速で読み込めます。
         dl.usage
           dt.usageTitle 文字数
           dd.usageDescription
@@ -84,6 +87,7 @@
       init () {
         this.localStorageSet()
         this.count()
+        this.attachEventCheckbox()
       },
 
       count (el) {
@@ -153,6 +157,16 @@
         }
       },
 
+      attachEventCheckbox () {
+        const checkBoxItems = [].slice.call(document.body.querySelectorAll('.js-checkbox'))
+
+        checkBoxItems.forEach((el) => {
+          el.addEventListener('change', (e) => {
+            this.setting(e.currentTarget)
+          })
+        })
+      },
+
       isLocalStorage () {
         if (window.localStorage) {
           return true
@@ -189,6 +203,14 @@
         if (this.isLocalStorage()) {
           localStorage.removeItem(this.localStorageName())
         }
+      },
+
+      loadWebFont () {
+        const webFontItems = [].slice.call(document.querySelectorAll('.js-webFont'))
+
+        webFontItems.forEach((el) => {
+          el.setAttribute('rel', 'stylesheet')
+        })
       }
     },
 
@@ -205,12 +227,8 @@
         this.localStorageClear()
       })
 
-      const items = [].slice.call(document.body.querySelectorAll('.js-checkbox'))
-
-      items.forEach((el) => {
-        el.addEventListener('change', (e) => {
-          this.setting(e.currentTarget)
-        })
+      window.addEventListener('load', () => {
+        this.loadWebFont()
       })
     }
   }
@@ -218,13 +236,8 @@
 
 <style lang="stylus" scoped>
 .wrapper
-  margin-top 16px
+  padding-top 16px
   transition .2s
-
-.inner
-  margin 0 auto
-  transition .2s
-  width 90vw
 
 header
   border-bottom 1px solid #eee
@@ -260,7 +273,7 @@ textarea
   padding 8px 16px 8px 8px
   resize none
   transition .2s
-  height calc(100vh - 321px)
+  height calc(100vh - 347px)
   width 100%
 
 button
@@ -407,7 +420,7 @@ path
     transform translateY(-300px)
 
   header + .inner
-    transform translateY(-271px)
+    transform translateY(-291px)
 
   textarea
     height calc(100vh - 56px)
@@ -458,6 +471,9 @@ path
   z-index -1
 
 @media screen and (max-width: 767px)
+  .wrapper
+    margin-bottom 10px
+
   h1
     font-size calc((100vw / 32) * 1.5)
 
@@ -488,6 +504,9 @@ path
     display none
 
   .editMode
+    margin-top 0
+    margin-bottom 0
+
     header
       display none
 
@@ -499,10 +518,9 @@ path
       transform translateY(0px)
 
 @media screen and (max-width: 767px) and (orientation: landscape)
-  header + .inner
+  .wrapper
     margin-bottom 10px
 
   .editMode
-    header + .inner
-      margin-bottom 0
+    margin-bottom 0
 </style>

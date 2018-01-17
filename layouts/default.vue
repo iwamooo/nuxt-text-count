@@ -3,8 +3,6 @@
 </template>
 
 <style lang="stylus">
-@import url('https://fonts.googleapis.com/css?family=Montserrat')
-
 html
   color #323648
   font-family 'Montserrat', sans-serif
