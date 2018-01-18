@@ -475,12 +475,17 @@ path
     margin-bottom 10px
 
   h1
-    font-size calc((100vw / 32) * 1.5)
+    font-size calc((100vw / 32) * 1.7)
 
-  p,
+  p
+    font-size 16px
+
+  .usage
+    display block
+
   .usageTitle,
   .usageDescription
-    font-size calc((100vw / 32))
+    font-size 16px
 
   textarea
     height auto

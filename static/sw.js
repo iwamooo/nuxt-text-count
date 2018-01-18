@@ -8,20 +8,20 @@ const workboxSW = new self.WorkboxSW({
 
 workboxSW.precache([
   {
-    "url": "/nuxt-count/_nuxt/app.912a18048c7eff4ab8b6.js",
-    "revision": "dd1116a0c27f065b10b310726d611c95"
+    "url": "/nuxt-count/_nuxt/app.59bfd6e210c29297fc60.js",
+    "revision": "715aaaf6dbf1426ab5e2c72a58be99dc"
   },
   {
     "url": "/nuxt-count/_nuxt/layouts/default.1ca916f3e65884b1842e.js",
     "revision": "2a48620361f54c11c50643c27b8e1d2d"
   },
   {
-    "url": "/nuxt-count/_nuxt/manifest.dda8b01b206dbcbfa493.js",
-    "revision": "46933cd8740c3e828fc3efe59abbc7e8"
+    "url": "/nuxt-count/_nuxt/manifest.009ad65aa0f91d399168.js",
+    "revision": "30360b7976732b62c309daa918059670"
   },
   {
-    "url": "/nuxt-count/_nuxt/pages/index.ff8e00804c83b25adc49.js",
-    "revision": "f106f932d73325c8d6b18b3813309b6b"
+    "url": "/nuxt-count/_nuxt/pages/index.c96ebbe4c5b61c5f8992.js",
+    "revision": "63a8494afd9f6ade89edbe5d9cc9c9cf"
   },
   {
     "url": "/nuxt-count/_nuxt/vendor.2a0c4eb19d9b51d0edef.js",
