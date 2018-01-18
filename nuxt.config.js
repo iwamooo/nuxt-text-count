@@ -50,7 +50,19 @@ module.exports = {
     'og:description': 'テキストボックスに入力された文字数・バイト数をカウントする便利なツール・サービスです。WEBサイトのライティング作業、Twitter投稿、レポート作成など、文字数制限のある文章作成をサポートします！',
     lang: 'ja',
     theme_color: '#ffffff',
-    background_color: '#ffffff'
+    background_color: '#ffffff',
+    "icons": [
+      {
+      "src": "/nuxt-count/logo192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+      },
+      {
+        "src": "/nuxt-count/logo512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+        }
+    ]
   },
   loading: false,
   router: {
