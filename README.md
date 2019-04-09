@@ -1,1 +1,1 @@
-# nuxt-count
+# nuxt-text-count

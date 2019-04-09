@@ -17,15 +17,13 @@ module.exports = {
       { hid: 'og:type', name: 'og:type', property: 'og:type', content: 'website' },
       { hid: 'og:site_name', name: 'og:site_name', property: 'og:site_name', content: '文字数・バイト数カウント' },
       { hid: 'og:title', name: 'og:title', property: 'og:title', content: '文字数・バイト数カウント' },
-      { hid: 'og:description', name: 'og:description', property: 'og:description', content: 'テキストボックスに入力された文字数・バイト数をカウントする便利なツール・サービスです。WEBサイトのライティング作業、Twitter投稿、レポート作成など、文字数制限のある文章作成をサポートします！' },
-      { hid: 'twitter:card', name: 'twitter:card', property: 'twitter:card', value: 'summary' },
-      { hid: 'twitter:site:id', name: 'twitter:site:id', property: 'twitter:site:id', value: 'xxx' }
+      { hid: 'og:description', name: 'og:description', property: 'og:description', content: 'テキストボックスに入力された文字数・バイト数をカウントする便利なツール・サービスです。WEBサイトのライティング作業、Twitter投稿、レポート作成など、文字数制限のある文章作成をサポートします！' }
     ],
     link: [
-      { rel: 'canonical', href: 'https://yossy0228.github.io/nuxt-count/' },
+      { rel: 'canonical', href: 'https://iwamooo.github.io/nuxt-text-count/' },
       { rel: 'prefetch', as: 'script', href: '//fonts.googleapis.com/css?family=Montserrat' },
       { rel: 'subresource', href: '//fonts.googleapis.com/css?family=Montserrat', class: 'js-webFont' },
-      { rel: 'icon', type: 'image/x-icon', href: '/nuxt-count/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/nuxt-text-count/favicon.ico' }
     ],
     __dangerouslyDisableSanitizers: ['script'],
     script: [{
@@ -33,10 +31,7 @@ module.exports = {
         "@context": "http://schema.org",
         "@type": "Person",
         "name": "文字数・バイト数カウント",
-        "url": "https://yossy0228.github.io/nuxt-count/",
-        "sameAs": [
-          "https://twitter.com/xxx/"
-        ]
+        "url": "https://iwamooo.github.io/nuxt-text-count/",
       }`,
       type: 'application/ld+json', body: true }
     ]
@@ -53,12 +48,12 @@ module.exports = {
     background_color: '#ffffff',
     "icons": [
       {
-      "src": "/nuxt-count/logo192.png",
+      "src": "/nuxt-text-count/logo192.png",
       "sizes": "192x192",
       "type": "image/png"
       },
       {
-        "src": "/nuxt-count/logo512.png",
+        "src": "/nuxt-text-count/logo512.png",
         "sizes": "512x512",
         "type": "image/png"
         }
@@ -66,7 +61,7 @@ module.exports = {
   },
   loading: false,
   router: {
-    base: '/nuxt-count/'
+    base: '/nuxt-text-count/'
   },
   /*
   ** Build configuration
