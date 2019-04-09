@@ -1,9 +1,7 @@
 {
   "name": "nuxt-text-count",
+  "description": "Nuxt.js Text Count",
   "version": "1.0.0",
-  "description": "Nuxt.js project",
-  "author": "iwamoto-ma <iwamoto-ma@gnavi.co.jp>",
-  "private": true,
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
